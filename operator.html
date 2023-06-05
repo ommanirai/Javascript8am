@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+
+<body>
+    <script>
+        /*
+        operator:
+        -> symbol which perform specific task
+        
+        types of operator:
+        1. arithmetic operator
+        2. relational operator
+        3. logical operator
+        4. comparision operator
+        5. conditional operator
+        6. concatinate operator
+        7. assignment operator
+        */
+        // arithmetic operator
+        // plus(+), minus(-), division(/), multiplication(*), remainder(%), increment(++), decrement(--)
+        var a = 12;
+        var b = 12;
+        var c = 23;
+        var sum = a + b + c;
+        var div = a / b
+        console.log(div)
+        var rem = a % b;
+        console.log(rem)
+
+        // relational operator
+        // >, <, >=, <=, !=(not equall to)
+        // block
+        // {
+
+        // }
+
+        if (a != 23) {
+            // console.log("a is not equall to b")
+        }
+
+        // logical operator
+        // &&(logical and), ||(logical or), !(logical not)
+
+        // logical and(&&)
+        /*
+        T -> true
+        F -> false
+
+        a   b  (a&&b)
+        T   T   T
+        T   F   F
+        F   T   F
+        F   F   F
+
+
+        // logical or
+        a   b  (a||b)
+        T   T   T
+        T   F   T
+        F   T   T
+        F   F   F
+
+        // logical not(!)
+        a   !a
+        T   F
+        F   T
+
+
+        */
+        if (a > 12 && b < 23 && c < 1) { // a(T) && b(T) result: T
+            console.log('block of logical and operator executes')
+        }
+
+        if (a = 13) {
+            console.log('true')
+        }
+
+        var nepali = prompt("enter the marks of nepali")
+        var english = prompt("enter the marks of english")
+
+        if(nepali > 35 && english > 35){
+            console.log("congratulation");
+        }
+
+    </script>
+</body>
+
+</html>
