@@ -18,12 +18,16 @@ switch(case){
         // body of default
 }
 */
-
+function sum(){
+    sum = a + b;
+    console.log(sum)
+}
 
 var day = 9;
 switch (day) {
     case 1:
-        console.log("sunday")
+        // console.log("sunday")
+        sum()
         break;
     case 2:
         console.log('monday')
