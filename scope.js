@@ -25,6 +25,7 @@
 
 
 // // functional scope
+// var maintain functional scope
 // // scope within the function
 // var greetingText = "Namaster"
 
@@ -46,6 +47,7 @@
 // console.log(a)
 
 // block scope
+//  let maintain block scope
 /*
 {
 
@@ -72,7 +74,7 @@ else {
 console.log("text is: ", text)
 
 
-if(12){
+if (12) {
     let n = 23;
     console.log(n)
 }
