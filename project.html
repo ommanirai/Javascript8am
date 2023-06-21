@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="number">something</h2>
+    <script>
+        var number = 0
+        setInterval(function () {
+            if (number == 10) {
+                clearInterval()
+            }
+            else {
+                number++
+                // document.write(number)
+                document.getElementById("number").innerHTML = number
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

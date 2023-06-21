@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hour:</h1>
+    <h2 id="hour">hour</h2>
+    <h1>Minute:</h1>
+    <h2 id="min">min</h2>
+    <h1>Second:</h1>
+    <h2 id="sec">sec</h2>ss
+    <script>
+        var hour = 0
+        var min = 55
+        var sec = 55
+
+        setInterval(function () {
+            sec++
+            document.getElementById("sec").innerHTML = sec
+            if (sec == 60) {
+                min++
+                document.getElementById("min").innerHTML = min
+                if (min == 60) {
+                    hour++
+                    min = 0
+                    document.getElementById("hour").innerHTML = hour
+                }
+                sec = 55
+            }
+        }, 500)
+
+        // if(sec == 60){
+        //     min++
+        //     sec = 1
+        //     if(min == 60){
+        //         hour++
+        //         min =1
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

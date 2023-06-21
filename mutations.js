@@ -29,8 +29,6 @@ detail1.status = "active"
 // console.log(detail)
 // console.log(detail1)
 
-
-
 var emailData = {
     from: 'vedu',
     to: 'ram@gmal.com',
