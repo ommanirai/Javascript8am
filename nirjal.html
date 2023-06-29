@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 700px;
+            height: 700px;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a" id="nirjal">
+    </div>
+    <button onmouseover="clickhere()">defult</button>
+    <button onmouseout="clickherealso()">dark</button>
+
+    <br>
+    <br>
+    <!-- <form action="" id="no"> -->
+    <input type="password" id="no">
+    <button type="submit">
+        <span onclick="hell()" id="yes">show</span>
+    </button>
+    <!-- </form> -->
+
+    <h2 id="hello"></h2>
+    <script>
+        var pass = 'password'
+        function hell() {
+            document.getElementById('no').type = 'text'
+            document.getElementById('yes').innerHTML = 'hide'
+            document.getElementById('').type = 'password'
+            if (
+                pass == 'password') {
+                document.getElementById('no').type = 'text'
+                document.getElementById('yes').innerHTML = 'hide'
+                pass = 'text'
+            }
+            else{
+                pass == 'text'
+                document.getElementById('no').type = 'password'
+                document.getElementById('yes').innerHTML = 'show'
+                pass = 'password'
+            }
+        }
+        function clickhere() {
+            document.getElementById('nirjal').style.backgroundColor = 'red'
+            document.getElementById('nirjal').style.width = '700px'
+            document.getElementById('nirjal').style.height = '700px'
+        }
+        function clickherealso() {
+            document.getElementById('nirjal').style.backgroundColor = 'black'
+            document.getElementById('nirjal').style.width = '700px'
+            document.getElementById('nirjal').style.height = '700px'
+        }
+        function hello() {
+            document.getElementById('hello').innerHTML = document.getElementById('no').value
+        }
+    </script>
+</body>
+
+</html>

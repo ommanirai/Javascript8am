@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="password">password</label><br>
+        <input type="password" id="hey" onkeyup="password_validation()">
+        <input type="text" id="hello" onkeyup="email_validation()">
+        <span id="password_error"></span>
+    </form>
+    <script>
+        function password_validation() {
+            var password = document.getElementById("hey").value
+
+            if (!password.match(/[a-zA-Z]+[!@#$%^&*1-10] +/)) {
+                displayMsg('password_error', 'password error', 'red')
+            }
+            else if (password.length < 8) {
+                displayMsg('password_error', 'password must be more then 8', 'black')
+            }
+            else {
+                displayMsg('password_error', 'valid password', 'green')
+            }
+        }
+        function displayMsg(id, msg, color) {
+            document.getElementById(id).innerHTML = msg;
+            document.getElementById(id).style.color = color;
+        }
+    </script>
+</body>
+
+</html>
