@@ -9,20 +9,37 @@
 
 <body>
     <form action="">
-        <label for="password">password</label><br>
-        <input type="password" id="hey" onkeyup="password_validation()">
+        <label for="email">email</label><br>
         <input type="text" id="hello" onkeyup="email_validation()">
-        <span id="password_error"></span>
+        <span id="error_username"></span><br>
+        <label for="password">password</label><br>
+        <input type="password" id="hey" onkeyup="password_validation()"><br>
+        <span id="password_error"></span><br>
     </form>
     <script>
+        function email_validation() {
+            var email = document.getElementById('hello').value
+            if (!email.match(/^[a-z0-9]+(@gmail.com)$/)) {
+                displayMsg('error_username', 'wrong email', 'red')
+            }
+            else {
+                displayMsg('error_username', 'valid email', 'black')
+            }
+        }
         function password_validation() {
             var password = document.getElementById("hey").value
 
-            if (!password.match(/[a-zA-Z]+[!@#$%^&*1-10] +/)) {
+            if (!password.match(/[a-zA-Z0-9][!@#$%^&*]/)) {
                 displayMsg('password_error', 'password error', 'red')
             }
             else if (password.length < 8) {
                 displayMsg('password_error', 'password must be more then 8', 'black')
+            }
+            else if (password.length > 8 && password.length < 12){
+                displayMsg('password_error', 'medium password', 'green')
+            }
+            else if (password.length > 12 && password.length < 32){
+                displayMsg('password_error', 'strong password', 'green')
             }
             else {
                 displayMsg('password_error', 'valid password', 'green')

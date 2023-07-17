@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">phone number</label><br>
+        <input type="text" placeholder="Phone number" id="hey" onkeyup="number_validation()">
+        <span id="number"></span>
+    </form>
+    <script>
+        function displayMsg(id, msg, color) {
+            document.getElementById(id).innerHTML = msg;
+            document.getElementById(id).style.color = color;
+        }
+        function number_validation() {
+            var number = document.getElementById('hey').value
+
+            if (!number.match(/^(97|98)/)) {
+                displayMsg('number', 'wrong', 'black')
+            }
+            else if((number.length != 10)){
+                displayMsg('number','there must be 10 number', 'red')
+            }
+                else {
+                    displayMsg('number', 'valid', 'green')
+                }
+        }
+    </script>
+</body>
+
+</html>

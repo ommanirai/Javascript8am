@@ -1,6 +1,7 @@
 /*
 Regular expression
-/../  - regular expression literal
+//
+/@gmail.com/- regular expression literal
 /gmail.com/ - regular expression
 /[]/ - single character
 /abc/ - exact match
@@ -28,7 +29,7 @@ $ - end
 []{n,} - at least n characters
 (abc) - compulsory
 
-/d - numbers, 0-9
+/d - numbers, 0-9  //d/
 /D - not number
 /w - alphanumeric characters, a-z, A-Z, 0-9
 /W - not alphanumeric characters

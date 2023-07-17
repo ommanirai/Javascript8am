@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>
+    <h1>player 1</h1>
+    <img src="" id="0">
+    <h1>player 2</h1>
+    <img src="" id="1">
+    <h1 id="nirjal"></h1>
+    <script>
+        img = ['12.png', '89.jpg', '1.png', '2.png', '4.png', '34.png']
+        var x = Math.random() * 5
+        var x = Math.floor(x)
+        document.write(x)
+        var y = Math.random() * 5
+        var y = Math.floor(y)
+        document.write(y)
+        if (x == y) {
+            // document.write('equal')
+            document.getElementById('0').src = img[x]
+            document.getElementById('1').src = img[y] 
+            document.getElementById('nirjal').innerHTML = 'draw'
+        }
+        else if (x > y) {
+            // document.write('x is greater')
+            document.getElementById('0').src = img[x]
+            document.getElementById('1').src = img[y] 
+            document.getElementById('nirjal').innerHTML = 'p1 win the game'
+        }
+        else {
+            // document.write('y is greater')
+            document.getElementById('0').src = img[x]
+            document.getElementById('1').src = img[y]
+            document.getElementById('nirjal').innerHTML = 'p2 win the game'
+        }
+
+    </script>
+    </body>
+
+</html>
